@@ -1,0 +1,19 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  
+.example-sidenav{
+  width: 18%;
+}
+
+.mat-drawer-content{
+  margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    height: auto;
+}
+.mat-drawer-container{
+  height: 88%;
+  overflow: scroll;
+}

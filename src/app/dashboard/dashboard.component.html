@@ -1,0 +1,86 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" (click)="drawer.toggle()" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Rashtriya Colliery Shramik Sangh</span>
+  <span class="example-spacer"></span>
+  <!--<button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>-->
+</mat-toolbar>  
+
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="over">
+
+
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="" (click)="expanded1 = false;expanded2=false;drawer.toggle()" >Dashboard</a>
+      
+      <mat-accordion>
+        <mat-expansion-panel hideToggle [expanded]="expanded1">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Members
+            </mat-panel-title>
+           
+          </mat-expansion-panel-header>
+          <a mat-list-item routerLink="members"  (click)="drawer.toggle();expanded1 = false;expanded2=false">All Members </a>
+          <a mat-list-item routerLink="members"  (click)="drawer.toggle();expanded1 = false;expanded2=false">Add Member </a>
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel hideToggle  [expanded]="expanded2">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Accounts
+            </mat-panel-title>
+           
+          </mat-expansion-panel-header>
+          <a mat-list-item routerLink="accounts"  (click)="drawer.toggle();expanded1 = false;expanded2=false">All Transactions </a>
+          <a mat-list-item routerLink="accounts"  (click)="drawer.toggle();expanded1 = false;expanded2=false">Add Transaction </a>
+        </mat-expansion-panel>
+
+        </mat-accordion>
+      <a mat-list-item routerLink="settings"  (click)="drawer.toggle();expanded1 = false;expanded2=false">Settings </a>
+      <a mat-list-item routerLink="upload" (click)="drawer.toggle();expanded1 = false;expanded2=false">Upload Data </a>
+
+      
+   </mat-nav-list>
+
+  <!-- <mat-list>
+    <mat-list-item>
+      <mat-icon matListIcon>folder</mat-icon>
+      <h3 matLine> nkjnlkjnkjnl </h3>
+     
+    </mat-list-item>
+  </mat-list>-->
+
+
+  </mat-drawer>
+ 
+
+
+  <mat-drawer-content>
+    
+
+
+    <router-outlet></router-outlet>
+
+  </mat-drawer-content>
+
+  
+</mat-drawer-container>
+
+
+
+
+
+
+
+  
+  
